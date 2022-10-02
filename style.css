@@ -1,0 +1,344 @@
+/*Imports custom fonts from './fonts'*/
+@font-face {
+    font-family: Beaufort;
+    src: url(fonts/Beaufort-Regular.woff2);
+}
+
+@font-face {
+    font-family: Beaufort;
+    src: url(fonts/Beaufort-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Beaufort;
+    src: url(fonts/Beaufort-Italic.woff2);
+    font-style: italic;
+}
+
+/*Defining colors as variables*/
+:root{
+    --bg-main: #121415;
+    --bg-panel: #161830;
+    --white: #fff;
+    --beige: #f0e6d2;
+    --dark-beige: #c8aa6e;
+    --highlight-blue: #38deff;
+    --highlight-purple: #7063cf;
+}
+
+
+
+body{
+    background-color: var(--bg-main);
+    margin:0;
+}
+
+/*Navbar*/
+nav{
+    background-color: var(--bg-main);
+    width: 100%;
+    height: auto;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 0;        /*Overwrites <ul>'s default 'padding-inline-start: 40px'*/
+    display:flex;            /*Makes <ul> a flex container*/
+    justify-content: center; /*Centers everything inside <ul>*/
+    align-items: center;     /*Aligns <il> elements on cross axis (vertical, top to bottom)*/
+}
+
+nav li{
+    display: inline-block;
+    padding: 0px 80px;
+}
+
+.navCurrentPage{
+    color: var(--highlight-blue);
+}
+
+nav a:hover{
+    color: var(--highlight-purple);
+    transition: color 0.5s;
+}
+
+nav a{
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--beige);
+    padding: 26px 0;
+}
+
+/*Splash Art Header*/
+header{
+    width: 100%;
+    height: auto;
+}
+
+.hero-image{
+    margin: 0;
+    padding-bottom: 50%;
+    background-image: linear-gradient(to top, rgba(18, 20, 21, 0.5), rgba(18, 20, 21, 0)), url(images/sylas.jpg);
+    /*Order is front to back, covers image with a gradient for text visibility*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;    /*Scrolling effect*/
+}
+
+.hero-text{
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgb(1 10 19 / 70%);
+}
+
+h1.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--beige);
+    margin: 0;
+}
+
+h2.hero-text{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--dark-beige);
+}
+
+/*Index Page*/
+.indexContent{
+    padding: 0 25%;
+    border-top: 2px solid var(--beige);
+}
+
+.indexContent h3{
+    text-align: center;
+    align-self: center;
+    font-size: 40px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.indexContent p{
+    font-size: 18px;
+    font-family: Beaufort;
+    text-align:center;
+    color:  var(--white);
+}
+
+.indexList{
+    display: flex;
+    justify-content: space-around;
+}
+
+.indexPros, .indexCons{
+    background-color: var(--bg-panel);
+    border-radius: 10px;
+    padding: 20px 20px 20px 40px;
+    width: fit-content;
+}
+
+.indexContent li{
+    font-size: 18px;
+    font-family: Beaufort;
+    color: var(--beige);
+}
+
+/*Lore text*/
+.loreContent h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 45px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.loreHr{
+    border: 1px solid var(--beige);
+}
+
+.loreContent{
+    padding: 0% 30%;
+    border-top: 2px solid var(--beige);
+}
+
+.loreContent p{
+    font-size: 18px;
+    font-family: Beaufort;
+    text-align:left;
+    color: var(--beige);
+}
+
+
+/*Ability page*/
+.spellHr{
+    border: 1px solid var(--beige);
+    margin: 0;
+}
+
+.spellContent{
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    border-top: 2px solid var(--beige);
+}
+
+.spellPreview{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.spellPreview img{
+    position: absolute;
+    border: 2px solid var(--beige);
+    border-radius: 15%;
+}
+
+.spellPreview video{
+    width: 70%;
+    border-radius: 50px;
+}
+
+.spellText h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--white);
+    margin-left: 74px;
+}
+
+.spellText p{
+    color: var(--beige);
+    font-size: 18px;
+    font-family: Beaufort;
+    font-style: italic;
+    text-align: left;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+/*Build Page*/
+
+.buildContent{
+    border-top: 2px solid var(--beige);
+    padding: 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.runesPanel{
+    background-color: var(--bg-panel);
+    border-radius: 100px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.buildHr{
+    width: 100%;
+}
+
+.buildContent h3{
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+    font-size: 50px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.buildPanel{
+    background-color: var(--bg-panel);
+    border-radius: 30px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.buildPanel h4{
+    font-size: 30px;
+    font-family: Beaufort;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.buildPanel img{
+    margin: 0 20px;
+    border: 2px solid var(--beige);
+    border-radius: 10%;
+}
+
+.buildPanel img:hover{
+    border: 2px solid var(--highlight-blue);
+}
+
+.buildPanel p{
+    color: var(--beige);
+    font-size: 18px;
+    font-family: Beaufort;
+    font-style: italic;
+    text-align: center;
+    padding: 0 40px;
+}
+
+/*Skins page*/
+
+.skinsContent{
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    border-top: 2px solid var(--beige);
+}
+
+.skinPreview{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.skinsContent h3{
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+    font-family: Beaufort;
+    font-weight: bold;
+    color: var(--beige);
+}
+
+.skinsContent img{
+    align-self: center;
+    border: 2px solid var(--beige);
+    border-radius: 50px;
+}
